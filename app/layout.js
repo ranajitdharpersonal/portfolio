@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Ranajit Dhar | AI/ML Developer",
   description: "Portfolio of Ranajit Dhar"
