@@ -19,7 +19,7 @@ export const projects = [
     description: "A next-gen AI assistant combining multiple tools with Gemini. Features: Deep Research Mode, multilingual chat (EN/BN/HI), News/Weather/Math tools, secure login (bcrypt + OTP), and real-time API integrations.",
     github: "https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool",
     demo: "https://yes-ai-multitool.streamlit.app",
-    year: "2025"
+    year: "2025",
     image: "/images/yes-ai.png"
   },
   {
@@ -27,7 +27,7 @@ export const projects = [
     description: "Autonomous multi-agent pipeline handling Plan → Create → Validate. Navigator, Curator and Evaluator agents collaborate for robust content + multimodal outputs.",
     github: "https://github.com/ranajitdharpersonal/YES-Ai-Studio-Capstone",
     demo: "",
-    year: "2025"
+    year: "2025",
     image: "/images/yes-ai-studio.png"
   }
   
