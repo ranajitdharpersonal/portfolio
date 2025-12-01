@@ -1,25 +1,20 @@
 "use client";
-
-import { motion } from "framer-motion";
 import { contact } from "@/data/content";
 
 export default function Contact() {
   return (
-    <section className="py-20 text-center max-w-3xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-neon mb-10"
-      >
-        Contact
-      </motion.h2>
+    <section id="contact" className="section">
+      <div className="container text-center">
+        <h2 className="text-3xl font-bold text-neon mb-4">Let’s build something great</h2>
+        <p className="text-slate-300 mb-6">Reach out for collaborations, freelance or hiring.</p>
 
-      <div className="space-y-4 text-lg text-gray-300">
-        <p>Email: <a className="text-neon" href={`mailto:${contact.email}`}>{contact.email}</a></p>
-        <p>LinkedIn: <a className="text-neon" href={contact.linkedin} target="_blank">Visit</a></p>
-        <p>GitHub: <a className="text-neon" href={contact.github} target="_blank">View Repos</a></p>
+        <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-neon rounded-md text-black font-semibold">Email Me</a>
+
+        <div className="mt-8 text-sm text-slate-400">
+          <a href={contact.linkedin} target="_blank" className="mx-3">LinkedIn</a>
+          <a href={contact.github} target="_blank" className="mx-3">GitHub</a>
+          <a href={contact.website} target="_blank" className="mx-3">Gamma Profile</a>
+        </div>
       </div>
     </section>
   );

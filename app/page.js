@@ -1,19 +1,25 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
+import Navbar from "@/components/Navbar";
+import AnimatedHero from "@/components/AnimatedHero";
+import ProjectCarousel from "@/components/ProjectCarousel";
+import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function Page(){
   return (
-    <main className="px-6 md:px-20 py-10 space-y-20">
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Certifications />
-      <Contact />
-    </main>
-  );
+    <>
+      <Navbar />
+      <main>
+        <AnimatedHero />
+        <ProjectCarousel />
+        <Timeline />
+        <Skills />
+        <Certifications />
+        <Contact />
+        <Footer />
+      </main>
+    </>
+  )
 }

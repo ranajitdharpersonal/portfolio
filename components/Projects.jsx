@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { projects } from "@/data/content";
+import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (

@@ -2,6 +2,7 @@ export const hero = {
   name: "Ranajit Dhar",
   title: "AI/ML Developer • Multi Agent Architect",
   subtitle: "Building production-grade, Gemini-powered agentic systems and cloud-integrated AI tools — from prototype to deployed product.",
+  image: "/images/profile.jpg"
 };
 
 export const about = {
@@ -19,6 +20,7 @@ export const projects = [
     github: "https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool",
     demo: "https://yes-ai-multitool.streamlit.app",
     year: "2025"
+    image: "/images/yes-ai.png"
   },
   {
     title: "YES AI Studio — Agentic Multimodal Creator (Capstone)",
@@ -26,14 +28,9 @@ export const projects = [
     github: "https://github.com/ranajitdharpersonal/YES-Ai-Studio-Capstone",
     demo: "",
     year: "2025"
-  },
-  {
-    title: "Kaggle Capstone — Agents Intensive",
-    description: "Capstone experiments on agent evaluation loops and automated dataset generation for rapid model iteration and benchmarking.",
-    github: "",
-    demo: "",
-    year: "2025"
+    image: "/images/yes-ai-studio.png"
   }
+  
 ];
 
 export const hackathons = [
