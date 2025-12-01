@@ -1,35 +1,26 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { certifications } from "@/data/content";
+import { certifications } from "../data/content";
 
 export default function Certifications() {
   return (
-    <section className="py-16 max-w-4xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-neon text-center mb-10"
-      >
+    <section id="certifications" className="py-16 max-w-6xl mx-auto px-6">
+      
+      <h2 className="text-3xl font-bold mb-10 text-center bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
         Certifications
-      </motion.h2>
+      </h2>
 
-      <ul className="space-y-4 text-gray-300">
-        {certifications.map((cert, index) => (
-          <motion.li
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="border-b border-neon/40 pb-3"
+      <div className="grid md:grid-columns-2 gap-6">
+        {certifications.map((cert, i) => (
+          <div
+            key={i}
+            className="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm hover:bg-white/10 transition"
           >
-            {cert}
-          </motion.li>
+            <h3 className="text-xl font-semibold">{cert.title}</h3>
+            <p className="text-white/70">{cert.org}</p>
+            <p className="text-white/50 text-sm">{cert.year}</p>
+          </div>
         ))}
-      </ul>
+      </div>
+
     </section>
   );
 }
