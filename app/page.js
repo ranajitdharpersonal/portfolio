@@ -5,18 +5,44 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20">
       
-      {/* 1. Hero Section (Animated) */}
-      <section className="w-full text-center space-y-6 mt-16 animate-slide-up">
+      {/* 1. Hero Section (Updated with Profile Pic) */}
+      <section className="w-full text-center space-y-6 mt-16 animate-slide-up flex flex-col items-center">
+        
+        {/* Tagline */}
         <div className="inline-block px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm mb-4">
           ✨ AI Engineer & Architect
         </div>
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-text-shine pb-2">
-          Ranajit Dhar
-        </h1>
-        <h2 className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto">
-          AI/ML Developer | Multi Agent Architect | <span className="text-white font-medium">Google Cloud Certified</span>
-        </h2>
+
+        {/* Profile Pic + Name Container */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+          
+          {/* Profile Picture (Round & Glowing) */}
+          <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-lg opacity-70 animate-pulse"></div>
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+               {/* Make sure 'profile.png' is in your public folder */}
+               <Image 
+                 src="/profile.png" 
+                 alt="Ranajit Dhar" 
+                 fill 
+                 className="object-cover"
+                 priority
+               />
+            </div>
+          </div>
+
+          {/* Name & Title */}
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-text-shine pb-2">
+              Ranajit Dhar
+            </h1>
+            <h2 className="text-lg md:text-xl text-gray-400 font-light mt-2">
+              AI/ML Developer | <span className="text-white font-medium">Google Cloud Certified</span>
+            </h2>
+          </div>
+        </div>
         
+        {/* Buttons */}
         <div className="flex justify-center gap-5 pt-8">
           <Link href="https://linkedin.com/in/ranajit-dhar-dev" className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition hover:scale-105 shadow-lg shadow-blue-500/25">
             Connect LinkedIn
@@ -27,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. About Me Section (Detailed) */}
+      {/* 2. About Me Section */}
       <section className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1">
         <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me ✨</h3>
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
@@ -50,10 +76,10 @@ export default function Home() {
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
         
         <div className="grid grid-cols-1 gap-12">
-          {/* Project 1: YES Ai */}
+          {/* Project 1 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
-               <span className="text-gray-500 text-sm">Upload `project1.png` to see magic</span>
+               <span className="text-gray-500 text-sm">Upload `project1.png`</span>
                {/* <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
             </div>
             <div className="md:w-1/2 space-y-5">
@@ -73,7 +99,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 2: YES Ai Studio */}
+          {/* Project 2 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
                <span className="text-gray-500 text-sm">Upload `project2.png`</span>
@@ -97,9 +123,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Hackathons & Skills (Grid) */}
+      {/* 4. Hackathons & Skills */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-3">
-         {/* Hackathons */}
          <section className="gamma-card p-8">
            <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition 2025</h3>
            <ul className="space-y-4 text-gray-300 text-sm">
@@ -118,15 +143,14 @@ export default function Home() {
            </ul>
          </section>
 
-         {/* Skills */}
          <section className="gamma-card p-8">
            <h3 className="text-xl font-bold mb-6 text-green-400 flex items-center gap-2">🧠 Core Technical Expertise</h3>
            <div className="space-y-6">
              <div>
                <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">AI & ML Skills</h4>
                <div className="flex flex-wrap gap-2">
-                  {["Generative AI", "Prompt Engineering", "Orchestration", "LLMs", "Vertex AI", "RAG", "Agentic Workflow"].map(s => (
-                    <span key={s} className="px-3 py-1 bg-green-500/10 text-green-300 border border-green-500/20 text-xs rounded-full hover:bg-green-500/20 transition cursor-default">
+                  {["Generative AI", "Prompt Engineering", "Orchestration", "LLMs", "Vertex AI", "RAG"].map(s => (
+                    <span key={s} className="px-3 py-1 bg-green-500/10 text-green-300 border border-green-500/20 text-xs rounded-full cursor-default">
                       {s}
                     </span>
                   ))}
@@ -135,8 +159,8 @@ export default function Home() {
              <div>
                <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">Development & Cloud</h4>
                <div className="flex flex-wrap gap-2">
-                  {["Python", "Streamlit", "Next.js", "Google Cloud Platform", "Cloud Run", "Serverless", "API Integration"].map(s => (
-                    <span key={s} className="px-3 py-1 bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs rounded-full hover:bg-blue-500/20 transition cursor-default">
+                  {["Python", "Streamlit", "Next.js", "Cloud Run", "Serverless", "API Integration"].map(s => (
+                    <span key={s} className="px-3 py-1 bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs rounded-full cursor-default">
                       {s}
                     </span>
                   ))}
@@ -146,9 +170,8 @@ export default function Home() {
          </section>
       </div>
 
-      {/* 5. Certifications & Education (Detailed) */}
+      {/* 5. Certifications & Education */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-4">
-         {/* Certifications */}
          <section className="gamma-card p-8">
            <h3 className="text-xl font-bold mb-6 text-pink-400">Google Cloud Certifications 📜</h3>
            <div className="flex items-center gap-4 mb-6">
@@ -172,7 +195,6 @@ export default function Home() {
            </div>
          </section>
 
-         {/* Education */}
          <section className="gamma-card p-8">
            <h3 className="text-xl font-bold mb-6 text-orange-400">Educational Foundation 🎓</h3>
            <div className="mb-8">
@@ -180,18 +202,18 @@ export default function Home() {
              <p className="text-gray-300">Bachelor of Commerce (Honours)</p>
              <p className="text-gray-500 text-sm mt-1">2019 - 2022</p>
              <p className="text-xs text-gray-400 mt-4 leading-relaxed bg-white/5 p-3 rounded">
-               Specialized in Accounting, Business Law & Finance. This foundation provides a unique perspective in developing AI solutions that address real business challenges.
+               Specialized in Accounting, Business Law & Finance.
              </p>
            </div>
            
            <div className="border-t border-gray-700 pt-6">
              <h4 className="text-white font-bold mb-1">Google Cloud Skill Boost</h4>
-             <p className="text-sm text-gray-400">Completed <strong>46+ courses</strong> and <strong>121+ hands-on labs</strong>, mastering key areas in AI, ML, and Cloud Infrastructure.</p>
+             <p className="text-sm text-gray-400">Completed <strong>46+ courses</strong> and <strong>121+ hands-on labs</strong>.</p>
            </div>
          </section>
       </div>
 
-      {/* 6. Footer / Contact */}
+      {/* 6. Footer */}
       <footer className="w-full text-center py-12 border-t border-white/5 animate-slide-up delay-4">
         <h3 className="text-3xl font-bold mb-6 text-white">Let's Connect 🤝</h3>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
