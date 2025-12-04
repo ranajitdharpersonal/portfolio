@@ -22,7 +22,7 @@ export default function Home() {
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
                {/* Make sure 'profile.png' is in your public folder */}
                <Image 
-                 src="/profile.png" 
+                 src="/profile.jpg" 
                  alt="Ranajit Dhar" 
                  fill 
                  className="object-cover"
