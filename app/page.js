@@ -80,7 +80,7 @@ export default function Home() {
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
                <span className="text-gray-500 text-sm">Upload `project1.png`</span>
-               {/* <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
+               {/* <Image src="public/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
             </div>
             <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-blue-400 transition">YES Ai 🤖</h4>
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
                <span className="text-gray-500 text-sm">Upload `project2.png`</span>
-               {/* <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
+               {/* <Image src="public/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
             </div>
             <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai Studio 🌟</h4>
