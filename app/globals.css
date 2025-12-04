@@ -4,32 +4,44 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 20, 20, 20;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #000;
+  /* Deep Modern Background with Mesh Gradient Effect */
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 0% 50%, rgba(50, 50, 90, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, rgba(90, 50, 50, 0.3) 0%, transparent 50%);
+  background-attachment: fixed;
   min-height: 100vh;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Gamma style card effect */
+/* Glass Card Effect - Aro Premium */
 .gamma-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px); /* Ghola Effect */
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(168, 85, 247, 0.4); /* Purple Glow on Hover */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.2);
+}
+
+/* Text Gradient for Headings */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
