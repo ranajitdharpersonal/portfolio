@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20">
       
-      {/* Hero Section */}
+      {/* 1. Hero Section (Animated) */}
       <section className="w-full text-center space-y-6 mt-16 animate-slide-up">
         <div className="inline-block px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm mb-4">
           ✨ AI Engineer & Architect
@@ -14,7 +14,7 @@ export default function Home() {
           Ranajit Dhar
         </h1>
         <h2 className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto">
-          Building <span className="text-white font-medium">Autonomous Agents</span> & <span className="text-white font-medium">Cloud AI Systems</span>
+          AI/ML Developer | Multi Agent Architect | <span className="text-white font-medium">Google Cloud Certified</span>
         </h2>
         
         <div className="flex justify-center gap-5 pt-8">
@@ -27,94 +27,185 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* 2. About Me Section (Detailed) */}
       <section className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1">
-        <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me</h3>
-        <p className="text-lg text-gray-300 leading-relaxed">
-          I'm a B.Com graduate turned <strong className="text-white">AI Engineer</strong>. Breaking the stereotype that you need a CS degree to code. I build autonomous agents, secure cloud workflows, and real-world generative AI applications.
-        </p>
-        <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/20">
-          <p className="text-purple-200">💡 <strong>Mission:</strong> Turning curiosity into reliable AI workflows.</p>
+        <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me ✨</h3>
+        <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
+        <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
+          <p>
+            I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. Breaking the stereotype that you need a CS degree to code. I build autonomous agents, secure cloud workflows, and real-world generative AI applications.
+          </p>
+          <p>
+            From starting with zero coding background to creating advanced agentic systems, my journey proves that <span className="text-blue-300">curiosity, grit, and creativity</span> can build anything.
+          </p>
+        </div>
+        <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/20">
+          <p className="text-purple-200 font-medium">💡 Where Curiosity Meets Creation</p>
+          <p className="text-gray-400 text-sm mt-2">My aim: Turn real problems into reliable AI workflows that people can actually use.</p>
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* 3. Featured Projects */}
       <section className="w-full animate-slide-up delay-2">
-        <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects</h3>
+        <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
         
-        <div className="grid grid-cols-1 gap-10">
-          {/* Project 1 */}
+        <div className="grid grid-cols-1 gap-12">
+          {/* Project 1: YES Ai */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
-            <div className="md:w-1/2 min-h-[250px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
+            <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
                <span className="text-gray-500 text-sm">Upload `project1.png` to see magic</span>
                {/* <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
             </div>
-            <div className="md:w-1/2 space-y-4">
+            <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-blue-400 transition">YES Ai 🤖</h4>
-              <p className="text-gray-400">Next-gen AI assistant with <strong>Gemini 2.0 Flash</strong> & <strong>Multi-Tool</strong> capabilities.</p>
-              <div className="flex flex-wrap gap-2 text-xs text-blue-200">
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full">Real-Time Data</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full">Cloud Run</span>
-                <span className="px-3 py-1 bg-blue-500/20 rounded-full">Secure Auth</span>
-              </div>
-              <div className="pt-4">
-                 <Link href="https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400">View Source Code &rarr;</Link>
+              <p className="text-gray-400">A next-gen AI assistant combining multiple tools with <strong>Gemini 2.0 Flash</strong>.</p>
+              
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="flex items-center gap-2">🌐 <strong>Real-Time:</strong> Seamlessly connects with live data.</li>
+                <li className="flex items-center gap-2">🔐 <strong>Secure:</strong> Custom login with bcrypt & OTP.</li>
+                <li className="flex items-center gap-2">☁️ <strong>Serverless:</strong> Deployed on Google Cloud Run.</li>
+              </ul>
+
+              <div className="pt-4 flex gap-4">
+                 <Link href="https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">View Code</Link>
+                 <Link href="#" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">Live Demo</Link>
               </div>
             </div>
           </div>
 
-          {/* Project 2 */}
+          {/* Project 2: YES Ai Studio */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
-            <div className="md:w-1/2 min-h-[250px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
+            <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
                <span className="text-gray-500 text-sm">Upload `project2.png`</span>
                {/* <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" /> */}
             </div>
-            <div className="md:w-1/2 space-y-4">
+            <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai Studio 🌟</h4>
               <p className="text-gray-400">Autonomous Multi-Agent Pipeline: <strong>Plan → Create → Validate</strong>.</p>
-              <div className="flex flex-wrap gap-2 text-xs text-purple-200">
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full">Agentic Workflow</span>
-                <span className="px-3 py-1 bg-purple-500/20 rounded-full">Automated QA</span>
+              
+              <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-2">
+                <p>🧭 <strong>Navigator:</strong> Generates learning roadmaps.</p>
+                <p>📰 <strong>Curator:</strong> Creates social media posts & images.</p>
+                <p>✅ <strong>Evaluator:</strong> Quality control & scoring.</p>
               </div>
+
                <div className="pt-4">
-                 <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400">View Capstone Repo &rarr;</Link>
+                 <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Capstone Repo</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Grid for Skills & Certs */}
+      {/* 4. Hackathons & Skills (Grid) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-3">
+         {/* Hackathons */}
          <section className="gamma-card p-8">
-           <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Wins</h3>
+           <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition 2025</h3>
            <ul className="space-y-4 text-gray-300 text-sm">
-             <li className="flex items-start gap-3">
-               <span className="mt-1 text-yellow-500">★</span>
-               <div><strong className="text-white">Google Cloud Run</strong><br/>Scalable AI deployment</div>
+             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
+               <strong className="text-white block text-base">Google Cloud Run Hackathon</strong>
+               Scalable cloud deployment & containerized AI.
              </li>
-             <li className="flex items-start gap-3">
-               <span className="mt-1 text-yellow-500">★</span>
-               <div><strong className="text-white">Chrome Built-in AI</strong><br/>Browser-native models</div>
+             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
+               <strong className="text-white block text-base">Chrome Built-in AI</strong>
+               Showcased browser integrated AI capabilities.
+             </li>
+             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
+               <strong className="text-white block text-base">Kaggle Community Hackathon</strong>
+               Structured agent pipelines & evaluation frameworks.
              </li>
            </ul>
          </section>
 
+         {/* Skills */}
          <section className="gamma-card p-8">
-           <h3 className="text-xl font-bold mb-6 text-green-400 flex items-center gap-2">🧠 Tech Stack</h3>
-           <div className="flex flex-wrap gap-2">
-              {["Python", "Generative AI", "Vertex AI", "Next.js", "Streamlit", "Docker", "GCP"].map(s => (
-                <span key={s} className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-sm hover:bg-white/10 transition cursor-default">
-                  {s}
-                </span>
-              ))}
+           <h3 className="text-xl font-bold mb-6 text-green-400 flex items-center gap-2">🧠 Core Technical Expertise</h3>
+           <div className="space-y-6">
+             <div>
+               <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">AI & ML Skills</h4>
+               <div className="flex flex-wrap gap-2">
+                  {["Generative AI", "Prompt Engineering", "Orchestration", "LLMs", "Vertex AI", "RAG", "Agentic Workflow"].map(s => (
+                    <span key={s} className="px-3 py-1 bg-green-500/10 text-green-300 border border-green-500/20 text-xs rounded-full hover:bg-green-500/20 transition cursor-default">
+                      {s}
+                    </span>
+                  ))}
+               </div>
+             </div>
+             <div>
+               <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">Development & Cloud</h4>
+               <div className="flex flex-wrap gap-2">
+                  {["Python", "Streamlit", "Next.js", "Google Cloud Platform", "Cloud Run", "Serverless", "API Integration"].map(s => (
+                    <span key={s} className="px-3 py-1 bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs rounded-full hover:bg-blue-500/20 transition cursor-default">
+                      {s}
+                    </span>
+                  ))}
+               </div>
+             </div>
            </div>
          </section>
       </div>
 
-      {/* Footer */}
-      <footer className="w-full text-center py-12 text-gray-500 border-t border-white/5 animate-slide-up delay-4">
-        <p>Built with Next.js & Tailwind • 2025 Ranajit Dhar</p>
+      {/* 5. Certifications & Education (Detailed) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-4">
+         {/* Certifications */}
+         <section className="gamma-card p-8">
+           <h3 className="text-xl font-bold mb-6 text-pink-400">Google Cloud Certifications 📜</h3>
+           <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl">🏅</div>
+              <div>
+                 <h4 className="text-white font-bold">55+ Skill Badges</h4>
+                 <p className="text-sm text-gray-400">Earned on Google Cloud Skills Boost</p>
+              </div>
+           </div>
+           <ul className="space-y-3 text-sm text-gray-300 list-disc ml-5 marker:text-pink-500">
+             <li>Inspect Rich Documents with Gemini</li>
+             <li>Multimodality and Multimodal RAG</li>
+             <li>Introduction to Generative AI</li>
+             <li>Develop GenAI Apps with Streamlit</li>
+             <li>Prompt Design in Vertex AI</li>
+           </ul>
+           <div className="mt-8">
+             <Link href="https://www.credly.com/users/ranajit-dhar" className="inline-flex items-center gap-2 px-5 py-2 bg-pink-600/20 text-pink-300 rounded-full text-sm hover:bg-pink-600/30 transition border border-pink-500/30">
+               View Credly Profile &rarr;
+             </Link>
+           </div>
+         </section>
+
+         {/* Education */}
+         <section className="gamma-card p-8">
+           <h3 className="text-xl font-bold mb-6 text-orange-400">Educational Foundation 🎓</h3>
+           <div className="mb-8">
+             <h4 className="text-white font-bold text-lg">University of Kalyani</h4>
+             <p className="text-gray-300">Bachelor of Commerce (Honours)</p>
+             <p className="text-gray-500 text-sm mt-1">2019 - 2022</p>
+             <p className="text-xs text-gray-400 mt-4 leading-relaxed bg-white/5 p-3 rounded">
+               Specialized in Accounting, Business Law & Finance. This foundation provides a unique perspective in developing AI solutions that address real business challenges.
+             </p>
+           </div>
+           
+           <div className="border-t border-gray-700 pt-6">
+             <h4 className="text-white font-bold mb-1">Google Cloud Skill Boost</h4>
+             <p className="text-sm text-gray-400">Completed <strong>46+ courses</strong> and <strong>121+ hands-on labs</strong>, mastering key areas in AI, ML, and Cloud Infrastructure.</p>
+           </div>
+         </section>
+      </div>
+
+      {/* 6. Footer / Contact */}
+      <footer className="w-full text-center py-12 border-t border-white/5 animate-slide-up delay-4">
+        <h3 className="text-3xl font-bold mb-6 text-white">Let's Connect 🤝</h3>
+        <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
+          Looking for someone who can bridge business insight with cutting-edge AI innovation? I'd love to hear from you.
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-10">
+           <a href="mailto:ranajitdharpersonal@gmail.com" className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition shadow-lg shadow-white/10 hover:-translate-y-1">
+            Email Me
+          </a>
+          <Link href="https://linkedin.com/in/ranajit-dhar-dev" className="px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 hover:-translate-y-1">
+            LinkedIn
+          </Link>
+        </div>
+        <p className="text-sm text-gray-600">Built with Next.js, Tailwind & Vercel • 2025 Ranajit Dhar</p>
       </footer>
 
     </main>
