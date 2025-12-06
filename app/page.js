@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
       
       {/* 🚀 FIXED NAV: Top-Right Corner (Moved Here) */}
-      <nav className="fixed top-5 right-5 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-black/20 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-black/40 transition duration-300">
+      <nav className="fixed top-6 right-6 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-white/10 transition duration-300">
           {[
             { name: "About", id: "#about" },
             { name: "Skills", id: "#skills" },
