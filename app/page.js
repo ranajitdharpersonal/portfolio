@@ -5,11 +5,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
       
-      {/* 1. Hero Section (Updated with Nav Dock) */}
-      <section className="w-full text-center space-y-8 mt-16 animate-slide-up flex flex-col items-center">
-        
-        {/* 🔥 NAVIGATION DOCK (New Update) */}
-        <nav className="inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl mb-4 hover:bg-white/10 transition duration-300">
+      {/* 🚀 FIXED NAV: Top-Right Corner (Moved Here) */}
+      <nav className="fixed top-5 right-5 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-black/20 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-black/40 transition duration-300">
           {[
             { name: "About", id: "#about" },
             { name: "Skills", id: "#skills" },
@@ -19,12 +16,17 @@ export default function Home() {
             <a 
               key={item.name} 
               href={item.id} 
-              className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              className="px-4 py-2 rounded-full text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
             >
               {item.name}
             </a>
           ))}
-        </nav>
+      </nav>
+
+      {/* 1. Hero Section (Nav Removed from here) */}
+      <section className="w-full text-center space-y-8 mt-16 animate-slide-up flex flex-col items-center">
+        
+        {/* Ekhane ar Nav nei, direct Profile Pic/Content shuru hobe... */}
 
         {/* Profile Pic + Name Container */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
