@@ -8,44 +8,49 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #030014; /* Deepest Dark Blue/Black */
+  background-color: #050505; /* Pitch Black er cheye ektu light */
   
-  /* --- CYBER GRID PATTERN --- */
-  /* Horizontal ar Vertical lines */
+  /* --- VISIBLE CYBER GRID --- */
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    /* Vertical Lines (Lomba) */
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    /* Horizontal Lines (Aara-ari) */
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   
-  background-size: 50px 50px; /* Grid er box er size */
-  background-position: center top;
+  background-size: 50px 50px; /* Box er size */
   
-  /* Center e ekta "Spotlight" glow */
-  box-shadow: inset 0 0 150px 100px #030014;
+  /* Top Center e ekta Blue Glow jate Grid ta shine kore */
+  background-repeat: repeat;
+  background-attachment: fixed;
+  
+  /* Glow Effect Overlay using pseudo-element trick in body isn't easy, 
+     so we use a radial gradient on html or just let the grid sit on dark bg */
   
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
-/* Glass Card - Grid er opore jeno bhalo photte */
+/* Glass Card */
 .gamma-card {
-  background: rgba(3, 0, 20, 0.6); /* Ektu dark kora holo */
+  background: rgba(10, 10, 20, 0.7); /* Card gulo ektu dark kora holo */
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   border-radius: 16px;
   transition: all 0.4s ease;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(99, 102, 241, 0.4); /* Indigo glow */
+  background: rgba(30, 30, 50, 0.8);
+  border-color: rgba(96, 165, 250, 0.5); /* Blue glow on hover */
   transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
 }
 
-/* Animations */
+/* Animations (Same as before) */
 .animate-text-shine {
-  background: linear-gradient(to right, #a5f3fc, #6366f1, #d8b4fe, #a5f3fc);
+  background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
