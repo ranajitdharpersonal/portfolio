@@ -71,6 +71,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* --- ADVANCED BENTO GRID: What Sets Me Apart --- */}
+      <section className="w-full animate-slide-up delay-2">
+        <h3 className="text-3xl font-bold mb-8 text-white flex items-center gap-3">
+          <span className="text-blue-500">⚡</span> What Sets Me Apart
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[400px]">
+          
+          {/* Card 1: Main USP (Boro Box) */}
+          <div className="col-span-1 md:col-span-2 row-span-2 gamma-card p-8 flex flex-col justify-center relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl -mr-10 -mt-10 rounded-full transition group-hover:bg-blue-500/30"></div>
+            <div className="text-5xl mb-6 group-hover:scale-110 transition duration-300">🧠</div>
+            <h4 className="text-2xl font-bold text-white mb-3">Business + AI Architect</h4>
+            <p className="text-gray-400 leading-relaxed">
+              Not just a coder. My <strong className="text-blue-300">Commerce background</strong> allows me to see the 'Money' & 'Value' behind every line of code. I build AI that sells.
+            </p>
+          </div>
+
+          {/* Card 2: Speed (Choto Box) */}
+          <div className="col-span-1 md:col-span-2 gamma-card p-6 flex items-center gap-4 group hover:bg-white/5 transition">
+             <div className="p-3 bg-purple-500/20 rounded-lg text-2xl group-hover:rotate-12 transition">🚀</div>
+             <div>
+               <h4 className="text-lg font-bold text-white">Rapid Prototyping</h4>
+               <p className="text-xs text-gray-400">Idea to Deployment in days.</p>
+             </div>
+          </div>
+
+          {/* Card 3: Agentic (Choto Box) */}
+          <div className="col-span-1 gamma-card p-6 flex flex-col justify-between group hover:bg-white/5 transition">
+             <div className="text-3xl mb-2 grayscale group-hover:grayscale-0 transition">🤖</div>
+             <h4 className="text-lg font-bold text-purple-300">Agentic Workflow</h4>
+          </div>
+
+          {/* Card 4: Tech Stack (Choto Box) */}
+          <div className="col-span-1 gamma-card p-6 flex flex-col justify-between group hover:bg-white/5 transition">
+             <div className="text-3xl mb-2 grayscale group-hover:grayscale-0 transition">☁️</div>
+             <h4 className="text-lg font-bold text-green-300">Cloud Native</h4>
+          </div>
+
+        </div>
+      </section>
+
       {/* 3. Featured Projects */}
       <section className="w-full animate-slide-up delay-2">
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
