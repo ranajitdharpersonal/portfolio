@@ -56,17 +56,21 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Buttons */}
-        <div className="flex justify-center gap-5 pt-8">
-          <Link href="https://linkedin.com/in/ranajit-dhar-dev" className="px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition hover:scale-105 shadow-lg shadow-blue-500/25">
+        {/* Buttons: Mobile (Vertical) / Desktop (Horizontal) */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 pt-8 w-full px-6 md:px-0">
+          
+          <Link href="https://linkedin.com/in/ranajit-dhar-dev" className="w-full md:w-auto px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition hover:scale-105 shadow-lg shadow-blue-500/25 text-center">
             Connect LinkedIn
           </Link>
-          <Link href="https://github.com/ranajitdharpersonal" className="px-8 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold transition hover:scale-105">
+          
+          <Link href="https://github.com/ranajitdharpersonal" className="w-full md:w-auto px-8 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold transition hover:scale-105 text-center">
             GitHub Profile
           </Link>
-          <a href="/resume.pdf" download className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition shadow-lg shadow-white/20 hover:-translate-y-1 flex items-center gap-2">
+          
+          <a href="/resume.pdf" download className="w-full md:w-auto px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition shadow-lg shadow-white/20 hover:-translate-y-1 flex items-center justify-center gap-2 text-center">
             <span>📄</span> Download CV
           </a>
+          
         </div>
       </section>
 
