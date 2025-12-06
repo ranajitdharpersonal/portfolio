@@ -9,48 +9,41 @@
 body {
   color: rgb(var(--foreground-rgb));
   
-  /* --- SECRET WEAPON: COSMIC GRADIENT --- */
-  /* Black nei, shudhu Deep Blue ar Vibrant Purple */
-  background: linear-gradient(-45deg, #0f172a, #312e81, #4c1d95, #1e1b4b);
+  /* --- ULTIMATE DARK MODE --- */
+  /* Black er sathe khub Deep Navy ar Deep Purple meshano */
+  background: linear-gradient(-45deg, #000000, #0b0f19, #100b1f, #000000);
   
   background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite; /* Ektu fast korechi jate bojha jay */
+  animation: gradientBG 15s ease infinite;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
-/* Movement Animation */
 @keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* --- GLASS CARD (Ektu Bright Kora Hoyeche) --- */
+/* Glass Card - Ektu Darker kora holo jate background er sathe mishe thake */
 .gamma-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Border ektu sada kora holo */
-  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(167, 139, 250, 0.3); /* Hover korle Purple Border */
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 92, 246, 0.2); /* Khub halka purple border */
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
 }
 
-/* --- ANIMATIONS (Same as before) --- */
+/* Animations (Same) */
 .animate-text-shine {
   background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
@@ -60,32 +53,13 @@ body {
   animation: textShine 4s linear infinite;
 }
 
-@keyframes textShine {
-  to { background-position: 200% center; }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-}
-
-.animate-slide-up {
-  opacity: 0;
-  animation: slideUp 0.8s ease-out forwards;
-}
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+@keyframes textShine { to { background-position: 200% center; } }
+.animate-float { animation: float 6s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+.animate-slide-up { opacity: 0; animation: slideUp 0.8s ease-out forwards; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.3s; }
 .delay-3 { animation-delay: 0.5s; }
 .delay-4 { animation-delay: 0.7s; }
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
