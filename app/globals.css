@@ -15,75 +15,91 @@ body {
   position: relative;
 }
 
-/* --- STAR RAIN ANIMATION --- */
+/* --- SHOOTING STARS (With Tails) --- */
 
-/* Layer 1: Choto Tara (Small & Slow) */
+/* Layer 1: Choto Tara (Slow & Short Tail) */
 body::before {
   content: " ";
   position: fixed;
-  top: -100px; /* Screen er opor theke shuru */
+  top: -200px;
   left: 0;
-  width: 3px;
-  height: 3px;
+  width: 1px;      /* Patla */
+  height: 20px;    /* Lomba (Tail) */
   background: transparent;
-  /* Onek gulo tara (Random Position) */
+  transform: rotate(45deg); /* Kona-kuni */
+  
+  /* Onek gulo tara */
   box-shadow: 
-    10vw 10vh #fff, 20vw 80vh #fff, 30vw 20vh #fff, 40vw 60vh #fff, 
-    50vw 10vh #fff, 60vw 90vh #fff, 70vw 30vh #fff, 80vw 50vh #fff, 
-    90vw 20vh #fff, 10vw 50vh #fff, 35vw 75vh #fff, 85vw 15vh #fff,
-    25vw 5vh #fff, 75vw 95vh #fff, 55vw 35vh #fff, 95vw 65vh #fff;
-  opacity: 0.4;
-  animation: starFall 10s linear infinite;
+    10vw -10vh #fff, 30vw -20vh #fff, 50vw -30vh #fff, 70vw -40vh #fff, 90vw -50vh #fff,
+    20vw 10vh #fff, 40vw 20vh #fff, 60vw 30vh #fff, 80vw 40vh #fff, 0vw 50vh #fff,
+    15vw 60vh #fff, 35vw 70vh #fff, 55vw 80vh #fff, 75vw 90vh #fff, 95vw 100vh #fff;
+    
+  opacity: 0;
+  animation: starFall 8s linear infinite;
   z-index: -1;
 }
 
-/* Layer 2: Majhari Tara (Medium & Fast) */
+/* Layer 2: Majhari Tara (Fast & Medium Tail) */
 body::after {
   content: " ";
   position: fixed;
-  top: -100px;
+  top: -200px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 2px;
+  height: 40px;    /* Aro Lomba Tail */
   background: transparent;
-  /* Aro kichu tara */
+  transform: rotate(45deg);
+  
   box-shadow: 
-    15vw 15vh #a5f3fc, 85vw 85vh #a5f3fc, 25vw 65vh #a5f3fc, 75vw 25vh #a5f3fc, 
-    45vw 45vh #a5f3fc, 5vw 95vh #a5f3fc, 95vw 5vh #a5f3fc, 50vw 50vh #a5f3fc,
-    30vw 10vh #a5f3fc, 70vw 90vh #a5f3fc, 10vw 30vh #a5f3fc, 90vw 70vh #a5f3fc;
-  opacity: 0.6;
-  animation: starFall 6s linear infinite;
+    5vw -5vh #a5f3fc, 25vw -25vh #a5f3fc, 45vw -45vh #a5f3fc, 65vw -65vh #a5f3fc, 85vw -85vh #a5f3fc,
+    10vw 30vh #a5f3fc, 30vw 50vh #a5f3fc, 50vw 70vh #a5f3fc, 70vw 90vh #a5f3fc, 90vw 10vh #a5f3fc;
+    
+  opacity: 0;
+  animation: starFall 5s linear infinite;
+  animation-delay: 1s; /* Ektu deri te shuru hobe */
   z-index: -1;
 }
 
-/* Layer 3: Boro Shooting Star (Fastest) */
+/* Layer 3: Boro Tara (Fastest & Longest Tail) */
 html::before {
   content: " ";
   position: fixed;
-  top: -100px;
+  top: -200px;
   left: 0;
-  width: 5px;
-  height: 5px;
+  width: 2px;
+  height: 70px;    /* Sobcheye Lomba Tail */
   background: transparent;
+  transform: rotate(45deg);
+  
   box-shadow: 
-    40vw 10vh #fff, 80vw 40vh #fff, 10vw 90vh #fff, 60vw 20vh #fff;
-  opacity: 0.8;
-  filter: drop-shadow(0 0 5px white); /* Glow effect */
+    50vw -10vh #fff, 20vw -40vh #fff, 80vw -20vh #fff;
+    
+  opacity: 0;
+  filter: drop-shadow(0 0 3px white); /* Glow */
   animation: starFall 3s linear infinite;
+  animation-delay: 2s;
   z-index: -2;
 }
 
-/* The Falling Animation (Top-Left to Bottom-Right) */
+/* Animation: Fade In -> Move -> Fade Out */
 @keyframes starFall {
-  from {
-    transform: translateY(0) translateX(0);
+  0% {
+    transform: rotate(45deg) translateY(0) translateX(0);
+    opacity: 0; /* Shuru te invisible */
   }
-  to {
-    transform: translateY(100vh) translateX(50vw); /* Kona-kuni porbe */
+  10% {
+    opacity: 0.8; /* Ektu por visible hobe */
+  }
+  90% {
+    opacity: 0.8; /* Shesh porjonto visible thakbe */
+  }
+  100% {
+    transform: rotate(45deg) translateY(120vh) translateX(20vw); /* Kona-kuni porbe */
+    opacity: 0; /* Sheshe invisible hoye jabe */
   }
 }
 
-/* --- CARDS & TEXT --- */
+/* --- CARDS & TEXT (Same as before) --- */
 .gamma-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
