@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
       
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section (Updated with Nav Dock) */}
       <section className="w-full text-center space-y-8 mt-16 animate-slide-up flex flex-col items-center">
         
-        {/* Navigation Dock */}
+        {/* 🔥 NAVIGATION DOCK (New Update) */}
         <nav className="inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl mb-4 hover:bg-white/10 transition duration-300">
           {[
             { name: "About", id: "#about" },
@@ -26,8 +26,10 @@ export default function Home() {
           ))}
         </nav>
 
-        {/* Profile Pic + Name */}
+        {/* Profile Pic + Name Container */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
+          
+          {/* Profile Picture (Round & Glowing) */}
           <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-lg opacity-70 animate-pulse"></div>
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
@@ -40,6 +42,8 @@ export default function Home() {
                />
             </div>
           </div>
+
+          {/* Name & Title */}
           <div className="text-center md:text-left">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-text-shine pb-2">
               Ranajit Dhar
@@ -64,13 +68,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. About Me (ID: about) */}
+      {/* 2. About Me Section (Added id="about") */}
       <section id="about" className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me ✨</h3>
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
         <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
           <p>
             I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. Breaking the stereotype that you need a CS degree to code. I build autonomous agents, secure cloud workflows, and real-world generative AI applications.
+          </p>
+          <p>
+            From starting with zero coding background to creating advanced agentic systems, my journey proves that <span className="text-blue-300">curiosity, grit, and creativity</span> can build anything.
           </p>
         </div>
         <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/20">
@@ -79,34 +86,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. What Sets Me Apart (NO ID here) */}
+      {/* 3. What Sets Me Apart (NO ID Here - Fixed) */}
       <section className="w-full animate-slide-up delay-2">
         <h3 className="text-3xl font-bold mb-8 text-white flex items-center gap-3">
           <span className="text-blue-500 animate-pulse">⚡</span> What Sets Me Apart
         </h3>
+
         <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-5 h-auto md:h-[450px]">
+          {/* Card 1: Main USP */}
           <div className="col-span-1 md:col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-8 flex flex-col justify-center group transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)]">
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/40 transition-all duration-700"></div>
             <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 transition-all duration-1000 group-hover:left-[150%]"></div>
             <div className="relative z-10">
                <div className="text-6xl mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">🧠</div>
                <h4 className="text-3xl font-bold text-white mb-3 tracking-tight">Business + AI Architect</h4>
-               <p className="text-gray-400 leading-relaxed text-lg">I bridge the gap between Code & Capital.</p>
+               <p className="text-gray-400 leading-relaxed text-lg">
+                 I bridge the gap between <span className="text-blue-400 font-semibold">Code</span> & <span className="text-purple-400 font-semibold">Capital</span>. My strategies turn AI concepts into profitable realities.
+               </p>
             </div>
           </div>
+          {/* Card 2: Speed */}
           <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex items-center gap-5 group transition-all duration-300 hover:-translate-y-1 hover:bg-white/5">
              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
              <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg">🚀</div>
              <div>
                <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Rapid Prototyping</h4>
-               <p className="text-sm text-gray-400">From 0 to Deploy in 48 Hours.</p>
+               <p className="text-sm text-gray-400">From 0 to Deploy in <span className="text-white font-mono">48 Hours</span>.</p>
              </div>
           </div>
+          {/* Card 3: Agentic */}
           <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
              <div className="absolute bottom-0 right-0 w-24 h-24 bg-purple-600/20 blur-[50px] rounded-full group-hover:bg-purple-600/40 transition"></div>
              <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">🤖</div>
              <h4 className="text-lg font-bold text-purple-200">Agentic<br/>Systems</h4>
           </div>
+          {/* Card 4: Cloud */}
           <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-green-500/50 transition-all duration-300">
              <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-600/20 blur-[50px] rounded-full group-hover:bg-green-600/40 transition"></div>
              <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">☁️</div>
@@ -115,15 +129,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Projects */}
-      <section className="w-full animate-slide-up delay-2">
+      {/* 4. Featured Projects (Added id="projects") */}
+      <section id="projects" className="w-full animate-slide-up delay-2 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
         
         <div className="grid grid-cols-1 gap-12">
           {/* Project 1 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
-               <span className="text-gray-500 text-sm">Upload `project1.png`</span>
                <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
@@ -146,7 +159,6 @@ export default function Home() {
           {/* Project 2 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
-               <span className="text-gray-500 text-sm">Upload `project2.png`</span>
                <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
@@ -167,22 +179,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Hackathons & Skills (ID: skills) */}
+      {/* 5. Hackathons & Skills (Added id="skills") */}
       <div id="skills" className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-3 scroll-mt-32">
          <section className="gamma-card p-8">
-           <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition</h3>
+           <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition 2025</h3>
            <ul className="space-y-4 text-gray-300 text-sm">
              <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-               <strong className="text-white block">Google Cloud Run Hackathon</strong>
-               Scalable cloud deployment.
+               <strong className="text-white block text-base">Google Cloud Run Hackathon</strong>
+               Scalable cloud deployment & containerized AI.
              </li>
              <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-               <strong className="text-white block">Chrome Built-in AI</strong>
-               Browser integrated AI.
+               <strong className="text-white block text-base">Chrome Built-in AI</strong>
+               Showcased browser integrated AI capabilities.
              </li>
              <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-               <strong className="text-white block">Kaggle Community Hackathon</strong>
-               Structured agent pipelines.
+               <strong className="text-white block text-base">Kaggle Community Hackathon</strong>
+               Structured agent pipelines & evaluation frameworks.
              </li>
            </ul>
          </section>
@@ -245,6 +257,9 @@ export default function Home() {
              <h4 className="text-white font-bold text-lg">University of Kalyani</h4>
              <p className="text-gray-300">Bachelor of Commerce (Honours)</p>
              <p className="text-gray-500 text-sm mt-1">2019 - 2022</p>
+             <p className="text-xs text-gray-400 mt-4 leading-relaxed bg-white/5 p-3 rounded">
+               Specialized in Accounting, Business Law & Finance.
+             </p>
            </div>
            
            <div className="border-t border-gray-700 pt-6">
@@ -254,7 +269,7 @@ export default function Home() {
          </section>
       </div>
 
-      {/* 7. Footer (ID: contact) */}
+      {/* 7. Footer (Added id="contact") */}
       <footer id="contact" className="w-full text-center py-12 border-t border-white/5 animate-slide-up delay-4 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-6 text-white">Let's Connect 🤝</h3>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
