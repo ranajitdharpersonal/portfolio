@@ -3,15 +3,28 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20">
+    <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
       
-      {/* 1. Hero Section (Updated with Profile Pic) */}
-      <section className="w-full text-center space-y-6 mt-16 animate-slide-up flex flex-col items-center">
+      {/* 1. Hero Section (Updated: Nav Dock Instead of Tagline) */}
+      <section className="w-full text-center space-y-8 mt-16 animate-slide-up flex flex-col items-center">
         
-        {/* Tagline */}
-        <div className="inline-block px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm mb-4">
-          ✨ AI Engineer & Architect
-        </div>
+        {/* 🔥 NAVIGATION DOCK (Glass Pill Style) */}
+        <nav className="inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl mb-4 hover:bg-white/10 transition duration-300">
+          {[
+            { name: "About", id: "#about" },
+            { name: "Skills", id: "#skills" },
+            { name: "Projects", id: "#projects" },
+            { name: "Contact", id: "#contact" },
+          ].map((item) => (
+            <a 
+              key={item.name} 
+              href={item.id} 
+              className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
 
         {/* Profile Pic + Name Container */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
@@ -20,7 +33,6 @@ export default function Home() {
           <div className="relative w-32 h-32 md:w-40 md:h-40 shrink-0">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-lg opacity-70 animate-pulse"></div>
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-               {/* Make sure 'profile.png' is in your public folder */}
                <Image 
                  src="/profile.jpg" 
                  alt="Ranajit Dhar" 
@@ -50,15 +62,14 @@ export default function Home() {
           <Link href="https://github.com/ranajitdharpersonal" className="px-8 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold transition hover:scale-105">
             GitHub Profile
           </Link>
-          {/* 👇 Notun Resume Button */}
           <a href="/resume.pdf" download className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition shadow-lg shadow-white/20 hover:-translate-y-1 flex items-center gap-2">
             <span>📄</span> Download CV
           </a>
         </div>
       </section>
 
-      {/* 2. About Me Section */}
-      <section className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1">
+      {/* 2. About Me Section (Added id="about") */}
+      <section id="about" className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me ✨</h3>
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
         <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
@@ -75,23 +86,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- DIAMOND BENTO GRID: Shimmer & Glow --- */}
-      <section className="w-full animate-slide-up delay-2">
+      {/* --- DIAMOND BENTO GRID (Added id="skills") --- */}
+      <section id="skills" className="w-full animate-slide-up delay-2 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-8 text-white flex items-center gap-3">
           <span className="text-blue-500 animate-pulse">⚡</span> What Sets Me Apart
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-5 h-auto md:h-[450px]">
           
-          {/* Card 1: Main USP (Magical Glow) */}
+          {/* Card 1: Main USP */}
           <div className="col-span-1 md:col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-8 flex flex-col justify-center group transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)]">
-            
-            {/* Background Moving Blob */}
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/40 transition-all duration-700"></div>
-            
-            {/* Shimmer Effect (Light reflection) */}
             <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 transition-all duration-1000 group-hover:left-[150%]"></div>
-
             <div className="relative z-10">
                <div className="text-6xl mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">🧠</div>
                <h4 className="text-3xl font-bold text-white mb-3 tracking-tight">Business + AI Architect</h4>
@@ -101,10 +107,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Card 2: Speed (Rocket Launch) */}
+          {/* Card 2: Speed */}
           <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex items-center gap-5 group transition-all duration-300 hover:-translate-y-1 hover:bg-white/5">
              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-             
              <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg">🚀</div>
              <div>
                <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Rapid Prototyping</h4>
@@ -112,14 +117,14 @@ export default function Home() {
              </div>
           </div>
 
-          {/* Card 3: Agentic (Floating Bot) */}
+          {/* Card 3: Agentic */}
           <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
              <div className="absolute bottom-0 right-0 w-24 h-24 bg-purple-600/20 blur-[50px] rounded-full group-hover:bg-purple-600/40 transition"></div>
              <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">🤖</div>
              <h4 className="text-lg font-bold text-purple-200">Agentic<br/>Systems</h4>
           </div>
 
-          {/* Card 4: Cloud (Infinite Scale) */}
+          {/* Card 4: Cloud */}
           <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-green-500/50 transition-all duration-300">
              <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-600/20 blur-[50px] rounded-full group-hover:bg-green-600/40 transition"></div>
              <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">☁️</div>
@@ -129,15 +134,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Featured Projects */}
-      <section className="w-full animate-slide-up delay-2">
+      {/* 3. Featured Projects (Added id="projects") */}
+      <section id="projects" className="w-full animate-slide-up delay-2 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
         
         <div className="grid grid-cols-1 gap-12">
           {/* Project 1 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
-               <span className="text-gray-500 text-sm">Upload `project1.png`</span>
                <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
@@ -160,19 +164,16 @@ export default function Home() {
           {/* Project 2 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
-               <span className="text-gray-500 text-sm">Upload `project2.png`</span>
                <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai Studio 🌟</h4>
               <p className="text-gray-400">Autonomous Multi-Agent Pipeline: <strong>Plan → Create → Validate</strong>.</p>
-              
               <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-2">
                 <p>🧭 <strong>Navigator:</strong> Generates learning roadmaps.</p>
                 <p>📰 <strong>Curator:</strong> Creates social media posts & images.</p>
                 <p>✅ <strong>Evaluator:</strong> Quality control & scoring.</p>
               </div>
-
                <div className="pt-4">
                  <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Capstone Repo</Link>
               </div>
@@ -181,7 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Hackathons & Skills */}
+      {/* 4. Hackathons & Skills (Part of Skills nav) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full animate-slide-up delay-3">
          <section className="gamma-card p-8">
            <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition 2025</h3>
@@ -271,8 +272,8 @@ export default function Home() {
          </section>
       </div>
 
-      {/* 6. Footer */}
-      <footer className="w-full text-center py-12 border-t border-white/5 animate-slide-up delay-4">
+      {/* 6. Footer (Added id="contact") */}
+      <footer id="contact" className="w-full text-center py-12 border-t border-white/5 animate-slide-up delay-4 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-6 text-white">Let's Connect 🤝</h3>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
           Looking for someone who can bridge business insight with cutting-edge AI innovation? I'd love to hear from you.
