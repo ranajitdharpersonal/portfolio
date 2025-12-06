@@ -8,75 +8,82 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, #020010, #0f172a, #020010); /* Deep Night Sky */
+  background: #020617; /* Deep Night Sky */
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   position: relative;
 }
 
-/* --- STAR FIELD (Tara Bhora Akash) --- */
+/* --- STAR RAIN ANIMATION --- */
+
+/* Layer 1: Choto Tara (Small & Slow) */
 body::before {
-  content: "";
+  content: " ";
   position: fixed;
-  top: 0;
+  top: -100px; /* Screen er opor theke shuru */
   left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Jate click kora jay */
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0));
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: twinkle 4s ease-in-out infinite;
-  opacity: 0.5;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  /* Onek gulo tara (Random Position) */
+  box-shadow: 
+    10vw 10vh #fff, 20vw 80vh #fff, 30vw 20vh #fff, 40vw 60vh #fff, 
+    50vw 10vh #fff, 60vw 90vh #fff, 70vw 30vh #fff, 80vw 50vh #fff, 
+    90vw 20vh #fff, 10vw 50vh #fff, 35vw 75vh #fff, 85vw 15vh #fff,
+    25vw 5vh #fff, 75vw 95vh #fff, 55vw 35vh #fff, 95vw 65vh #fff;
+  opacity: 0.4;
+  animation: starFall 10s linear infinite;
   z-index: -1;
 }
 
-@keyframes twinkle {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.3; }
-}
-
-/* --- SHOOTING STAR ANIMATION --- */
+/* Layer 2: Majhari Tara (Medium & Fast) */
 body::after {
-  content: "";
+  content: " ";
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: -100px;
+  left: 0;
   width: 4px;
   height: 4px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
-  animation: shootingStar 3s linear infinite;
-  opacity: 0;
-  pointer-events: none;
+  background: transparent;
+  /* Aro kichu tara */
+  box-shadow: 
+    15vw 15vh #a5f3fc, 85vw 85vh #a5f3fc, 25vw 65vh #a5f3fc, 75vw 25vh #a5f3fc, 
+    45vw 45vh #a5f3fc, 5vw 95vh #a5f3fc, 95vw 5vh #a5f3fc, 50vw 50vh #a5f3fc,
+    30vw 10vh #a5f3fc, 70vw 90vh #a5f3fc, 10vw 30vh #a5f3fc, 90vw 70vh #a5f3fc;
+  opacity: 0.6;
+  animation: starFall 6s linear infinite;
   z-index: -1;
 }
 
-/* Shooting Star Movement */
-@keyframes shootingStar {
-  0% {
-    transform: rotate(315deg) translateX(0);
-    opacity: 1;
+/* Layer 3: Boro Shooting Star (Fastest) */
+html::before {
+  content: " ";
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  box-shadow: 
+    40vw 10vh #fff, 80vw 40vh #fff, 10vw 90vh #fff, 60vw 20vh #fff;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 5px white); /* Glow effect */
+  animation: starFall 3s linear infinite;
+  z-index: -2;
+}
+
+/* The Falling Animation (Top-Left to Bottom-Right) */
+@keyframes starFall {
+  from {
+    transform: translateY(0) translateX(0);
   }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(315deg) translateX(-1000px);
-    opacity: 0;
+  to {
+    transform: translateY(100vh) translateX(50vw); /* Kona-kuni porbe */
   }
 }
 
-/* Glass Card */
+/* --- CARDS & TEXT --- */
 .gamma-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -92,7 +99,6 @@ body::after {
   box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.3);
 }
 
-/* Text & Float Animations (Same as before) */
 .animate-text-shine {
   background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
