@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
+    <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth relative">
       
       {/* 🚀 RESPONSIVE NAV: Mobile (Center) + Desktop (Top-Right) */}
       <nav className="relative md:absolute md:top-6 md:right-6 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-white/10 transition duration-300 mt-4 md:mt-0">
@@ -291,6 +292,10 @@ export default function Home() {
         </div>
         <p className="text-sm text-gray-600">Built with Next.js, Tailwind & Vercel • 2025 Ranajit Dhar</p>
       </footer>
+      {/* 🌌 BACKGROUND BEAMS (Finally Here) */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+         <BackgroundBeams />
+      </div>
 
     </main>
   );
