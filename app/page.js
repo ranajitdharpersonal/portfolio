@@ -115,38 +115,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Projects (ID: projects) */}
-      <section id="projects" className="w-full animate-slide-up delay-2 scroll-mt-32">
+      {/* 3. Featured Projects */}
+      <section className="w-full animate-slide-up delay-2">
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
+        
         <div className="grid grid-cols-1 gap-12">
           {/* Project 1 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
+               <span className="text-gray-500 text-sm">Upload `project1.png`</span>
                <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-blue-400 transition">YES Ai 🤖</h4>
-              <p className="text-gray-400">A next-gen AI assistant combining multiple tools with Gemini 2.0 Flash.</p>
+              <p className="text-gray-400">A next-gen AI assistant combining multiple tools with <strong>Gemini 2.0 Flash</strong>.</p>
+              
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li className="flex items-center gap-2">🌐 Real-Time Integration</li>
-                <li className="flex items-center gap-2">🔐 Secure Login</li>
-                <li className="flex items-center gap-2">☁️ Serverless Cloud Run</li>
+                <li className="flex items-center gap-2">🌐 <strong>Real-Time:</strong> Seamlessly connects with live data.</li>
+                <li className="flex items-center gap-2">🔐 <strong>Secure:</strong> Custom login with bcrypt & OTP.</li>
+                <li className="flex items-center gap-2">☁️ <strong>Serverless:</strong> Deployed on Google Cloud Run.</li>
               </ul>
+
               <div className="pt-4 flex gap-4">
                  <Link href="https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">View Code</Link>
+                 <Link href="#" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">Live Demo</Link>
               </div>
             </div>
           </div>
+
           {/* Project 2 */}
           <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
             <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
+               <span className="text-gray-500 text-sm">Upload `project2.png`</span>
                <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" />
             </div>
             <div className="md:w-1/2 space-y-5">
               <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai Studio 🌟</h4>
-              <p className="text-gray-400">Autonomous Multi-Agent Pipeline: Plan → Create → Validate.</p>
+              <p className="text-gray-400">Autonomous Multi-Agent Pipeline: <strong>Plan → Create → Validate</strong>.</p>
+              
+              <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-2">
+                <p>🧭 <strong>Navigator:</strong> Generates learning roadmaps.</p>
+                <p>📰 <strong>Curator:</strong> Creates social media posts & images.</p>
+                <p>✅ <strong>Evaluator:</strong> Quality control & scoring.</p>
+              </div>
+
                <div className="pt-4">
-                 <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Repo</Link>
+                 <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Capstone Repo</Link>
               </div>
             </div>
           </div>
