@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 max-w-5xl mx-auto space-y-20 scroll-smooth">
       
-      {/* 🚀 ABSOLUTE NAV: Page er sathe scroll hobe */}
-      <nav className="absolute top-6 right-6 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-white/10 transition duration-300">
+      {/* 🚀 RESPONSIVE NAV: Mobile (Center) + Desktop (Top-Right) */}
+      <nav className="relative md:absolute md:top-6 md:right-6 z-50 inline-flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl hover:bg-white/10 transition duration-300 mt-4 md:mt-0">
           {[
             { name: "About", id: "#about" },
             { name: "Skills", id: "#skills" },
@@ -16,7 +16,7 @@ export default function Home() {
             <a 
               key={item.name} 
               href={item.id} 
-              className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
+              className="px-3 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               {item.name}
             </a>
