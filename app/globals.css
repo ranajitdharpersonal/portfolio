@@ -9,12 +9,12 @@
 body {
   color: rgb(var(--foreground-rgb));
   
-  /* --- ULTIMATE DARK MODE --- */
-  /* Black er sathe khub Deep Navy ar Deep Purple meshano */
-  background: linear-gradient(-45deg, #000000, #0b0f19, #100b1f, #000000);
+  /* --- VISIBLE DARK MODE --- */
+  /* Black er sathe ektu Sposto Deep Blue ar Purple deya holo */
+  background: linear-gradient(-45deg, #020617, #1e1b4b, #312e81, #0f172a);
   
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 8s ease infinite; /* Speed bariechi jate norata chokhe pore */
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -26,24 +26,24 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Glass Card - Ektu Darker kora holo jate background er sathe mishe thake */
+/* Glass Card */
 .gamma-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(139, 92, 246, 0.2); /* Khub halka purple border */
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(167, 139, 250, 0.4);
   transform: translateY(-5px);
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
 }
 
-/* Animations (Same) */
+/* Animations */
 .animate-text-shine {
   background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
