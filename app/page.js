@@ -50,6 +50,10 @@ export default function Home() {
           <Link href="https://github.com/ranajitdharpersonal" className="px-8 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold transition hover:scale-105">
             GitHub Profile
           </Link>
+          {/* 👇 Notun Resume Button */}
+          <a href="/resume.pdf" download className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition shadow-lg shadow-white/20 hover:-translate-y-1 flex items-center gap-2">
+            <span>📄</span> Download CV
+          </a>
         </div>
       </section>
 
