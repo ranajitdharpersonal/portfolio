@@ -8,82 +8,83 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #000000;
+  background: #020617; /* Deep Night Sky */
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   position: relative;
 }
 
-/* --- THE AURORA EFFECT (Liquid Energy) --- */
-
-/* Blob 1: Purple Energy */
+/* --- STATIC STARS (Pichone choto choto tara) --- */
 body::before {
   content: "";
   position: fixed;
-  top: -20%;
-  left: -10%;
-  width: 70vw;
-  height: 70vh;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(80px); /* Soft Glow */
-  animation: moveBlob1 15s infinite alternate; /* Dheu khelbe */
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.2; /* Khub halka */
   z-index: -2;
 }
 
-/* Blob 2: Cyan/Blue Energy */
+/* --- SHOOTING STAR (Lomba Lej) --- */
 body::after {
   content: "";
   position: fixed;
-  bottom: -20%;
-  right: -10%;
-  width: 60vw;
-  height: 60vh;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(80px);
-  animation: moveBlob2 18s infinite alternate;
-  z-index: -2;
-}
-
-/* Animations for Fluid Movement */
-@keyframes moveBlob1 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(20vw, 10vh) scale(1.1); }
-}
-
-@keyframes moveBlob2 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-20vw, -10vh) scale(1.2); }
-}
-
-/* --- GRID OVERLAY (Optional Texture) --- */
-/* Aurora-r opore halka ekta pattern deya holo jate professional lage */
-html::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  width: 300px; /* Lej ta onek lomba kora holo */
+  height: 1px;  /* Ekdom sorru */
+  
+  /* Lej er Design: Transparent theke White */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  
+  /* Glow Effect */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  
+  opacity: 0;
+  transform: rotate(-45deg); /* Kona-kuni */
+  animation: meteor 4s ease-in-out infinite;
   z-index: -1;
+  pointer-events: none;
 }
 
-/* --- CARDS & TEXT (Glassmorphism Perfected) --- */
+/* Meteor Animation */
+@keyframes meteor {
+  0% {
+    transform: rotate(-45deg) translateX(300px) translateY(-300px); /* Dure */
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* Bright hobe */
+  }
+  20% {
+    transform: rotate(-45deg) translateX(-300px) translateY(300px); /* Screen cross korbe */
+    opacity: 0; /* Milie jabe */
+  }
+  100% {
+    opacity: 0; /* Wait korbe */
+  }
+}
+
+/* --- CARDS & TEXT --- */
 .gamma-card {
-  background: rgba(255, 255, 255, 0.03); /* Ekdom transparent */
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px); /* Blur bariyechi */
+  backdrop-filter: blur(12px);
   border-radius: 16px;
   transition: all 0.4s ease;
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.5);
   transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(139, 92, 246, 0.15); /* Purple shadow glow */
+  box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.3);
 }
 
-/* Animations (Same) */
 .animate-text-shine {
   background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
