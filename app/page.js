@@ -71,45 +71,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- UPDATED BENTO GRID: Always Colorful --- */}
+      {/* --- DIAMOND BENTO GRID: Shimmer & Glow --- */}
       <section className="w-full animate-slide-up delay-2">
         <h3 className="text-3xl font-bold mb-8 text-white flex items-center gap-3">
-          <span className="text-blue-500">⚡</span> What Sets Me Apart
+          <span className="text-blue-500 animate-pulse">⚡</span> What Sets Me Apart
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-5 h-auto md:h-[450px]">
           
-          {/* Card 1: Main USP (Boro Box) */}
-          <div className="col-span-1 md:col-span-2 row-span-2 gamma-card p-8 flex flex-col justify-center relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl -mr-10 -mt-10 rounded-full transition group-hover:bg-blue-500/30"></div>
-            <div className="text-5xl mb-6 transition duration-300 transform group-hover:scale-110 group-hover:rotate-3">🧠</div>
-            <h4 className="text-2xl font-bold text-white mb-3">Business + AI Architect</h4>
-            <p className="text-gray-400 leading-relaxed">
-              Not just a coder. My <strong className="text-blue-300">Commerce background</strong> allows me to see the 'Money' & 'Value' behind every line of code. I build AI that sells.
-            </p>
+          {/* Card 1: Main USP (Magical Glow) */}
+          <div className="col-span-1 md:col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-8 flex flex-col justify-center group transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)]">
+            
+            {/* Background Moving Blob */}
+            <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/40 transition-all duration-700"></div>
+            
+            {/* Shimmer Effect (Light reflection) */}
+            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 transition-all duration-1000 group-hover:left-[150%]"></div>
+
+            <div className="relative z-10">
+               <div className="text-6xl mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">🧠</div>
+               <h4 className="text-3xl font-bold text-white mb-3 tracking-tight">Business + AI Architect</h4>
+               <p className="text-gray-400 leading-relaxed text-lg">
+                 I bridge the gap between <span className="text-blue-400 font-semibold">Code</span> & <span className="text-purple-400 font-semibold">Capital</span>. My strategies turn AI concepts into profitable realities.
+               </p>
+            </div>
           </div>
 
-          {/* Card 2: Speed (Choto Box) */}
-          <div className="col-span-1 md:col-span-2 gamma-card p-6 flex items-center gap-4 group hover:bg-white/5 transition">
-             <div className="p-3 bg-purple-500/20 rounded-lg text-2xl transition duration-300 transform group-hover:scale-110 group-hover:-rotate-12">🚀</div>
+          {/* Card 2: Speed (Rocket Launch) */}
+          <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex items-center gap-5 group transition-all duration-300 hover:-translate-y-1 hover:bg-white/5">
+             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+             
+             <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg">🚀</div>
              <div>
-               <h4 className="text-lg font-bold text-white">Rapid Prototyping</h4>
-               <p className="text-xs text-gray-400">Idea to Deployment in days.</p>
+               <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Rapid Prototyping</h4>
+               <p className="text-sm text-gray-400">From 0 to Deploy in <span className="text-white font-mono">48 Hours</span>.</p>
              </div>
           </div>
 
-          {/* Card 3: Agentic (Fixed Color) */}
-          <div className="col-span-1 gamma-card p-6 flex flex-col justify-between group hover:bg-white/5 transition">
-             {/* Ekhane grayscale bad diyechi */}
-             <div className="text-4xl mb-2 transition duration-300 transform group-hover:scale-110">🤖</div>
-             <h4 className="text-lg font-bold text-purple-300">Agentic Workflow</h4>
+          {/* Card 3: Agentic (Floating Bot) */}
+          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
+             <div className="absolute bottom-0 right-0 w-24 h-24 bg-purple-600/20 blur-[50px] rounded-full group-hover:bg-purple-600/40 transition"></div>
+             <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">🤖</div>
+             <h4 className="text-lg font-bold text-purple-200">Agentic<br/>Systems</h4>
           </div>
 
-          {/* Card 4: Tech Stack (Fixed Color) */}
-          <div className="col-span-1 gamma-card p-6 flex flex-col justify-between group hover:bg-white/5 transition">
-             {/* Ekhane grayscale bad diyechi */}
-             <div className="text-4xl mb-2 transition duration-300 transform group-hover:scale-110">☁️</div>
-             <h4 className="text-lg font-bold text-green-300">Cloud Native</h4>
+          {/* Card 4: Cloud (Infinite Scale) */}
+          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-green-500/50 transition-all duration-300">
+             <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-600/20 blur-[50px] rounded-full group-hover:bg-green-600/40 transition"></div>
+             <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">☁️</div>
+             <h4 className="text-lg font-bold text-green-200">Cloud<br/>Native</h4>
           </div>
 
         </div>
