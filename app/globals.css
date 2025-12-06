@@ -8,76 +8,68 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #000000;
-  min-height: 100vh;
+  background-color: #030014; /* Aro Deep Dark */
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 0% 50%, rgba(50, 50, 90, 0.2) 0%, transparent 50%);
+  background-attachment: fixed;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* --- BACKGROUND GRADIENT (Deep Blue Glow) --- */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #000000 80%);
-  z-index: -2;
-}
-
-/* --- FLOATING PARTICLES (Bhashman Kona) --- */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-image: 
-    radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
-  background-size: 60px 60px, 120px 120px;
-  background-position: 0 0, 0 0;
-  animation: particleMove 60s linear infinite; /* Khub Slow Move korbe */
-  opacity: 0.6;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Particles Movement Animation */
-@keyframes particleMove {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 0 1000px, 0 500px; }
-}
-
-/* --- CARDS & TEXT --- */
+/* Glass Card Premium */
 .gamma-card {
-  background: rgba(10, 10, 20, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
   border-radius: 16px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .gamma-card:hover {
-  background: rgba(20, 20, 40, 0.6);
-  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(139, 92, 246, 0.5); /* Violet Glow */
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
 }
 
-/* Animations */
+/* --- ADVANCED ANIMATIONS --- */
+
+/* 1. Nam ta Shine korbe */
 .animate-text-shine {
-  background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
+  background: linear-gradient(to right, #60a5fa, #c084fc, #f472b6, #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-size: 200% auto;
   animation: textShine 4s linear infinite;
 }
-@keyframes textShine { to { background-position: 200% center; } }
-.animate-float { animation: float 6s ease-in-out infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
-.animate-slide-up { opacity: 0; animation: slideUp 0.8s ease-out forwards; }
-@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes textShine {
+  to { background-position: 200% center; }
+}
+
+/* 2. Floating Effect (Bhasha Bhasha bhab) */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 3. Smooth Entry (Load howar somoy) */
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Delays jeno ekta ekta kore ashe */
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.3s; }
 .delay-3 { animation-delay: 0.5s; }
 .delay-4 { animation-delay: 0.7s; }
-html { scroll-behavior: smooth; }
