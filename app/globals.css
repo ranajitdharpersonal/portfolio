@@ -8,16 +8,19 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* Magic Gradient Background */
-  background: linear-gradient(-45deg, #02001f, #1e1e24, #13133a, #000000);
+  
+  /* --- SECRET WEAPON: COSMIC GRADIENT --- */
+  /* Black nei, shudhu Deep Blue ar Vibrant Purple */
+  background: linear-gradient(-45deg, #0f172a, #312e81, #4c1d95, #1e1b4b);
+  
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite; /* Slow Motion Movement */
+  animation: gradientBG 12s ease infinite; /* Ektu fast korechi jate bojha jay */
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
 
-/* Background Animation Logic */
+/* Movement Animation */
 @keyframes gradientBG {
   0% {
     background-position: 0% 50%;
@@ -30,26 +33,26 @@ body {
   }
 }
 
-/* --- GLOWING GLASS CARD --- */
+/* --- GLASS CARD (Ektu Bright Kora Hoyeche) --- */
 .gamma-card {
-  background: rgba(255, 255, 255, 0.02); /* Aro Transparent */
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px); /* Blur bariyechi */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Border ektu sada kora holo */
+  backdrop-filter: blur(16px);
   border-radius: 16px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .gamma-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(167, 139, 250, 0.3); /* Hover korle Purple Border */
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
-/* --- TEXT ANIMATIONS --- */
+/* --- ANIMATIONS (Same as before) --- */
 .animate-text-shine {
-  background: linear-gradient(to right, #93c5fd, #c084fc, #f472b6, #93c5fd);
+  background: linear-gradient(to right, #60a5fa, #c084fc, #e879f9, #60a5fa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -61,7 +64,6 @@ body {
   to { background-position: 200% center; }
 }
 
-/* --- FLOATING & SLIDING ANIMATIONS --- */
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
@@ -79,13 +81,11 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Delays */
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.3s; }
 .delay-3 { animation-delay: 0.5s; }
 .delay-4 { animation-delay: 0.7s; }
 
-/* Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
