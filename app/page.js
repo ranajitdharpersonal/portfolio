@@ -16,7 +16,7 @@ export default function Home() {
             <a 
               key={item.name} 
               href={item.id} 
-              className="px-4 py-2 rounded-full text-xs font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
+              className="px-5 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               {item.name}
             </a>
