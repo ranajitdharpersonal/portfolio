@@ -103,7 +103,12 @@ export default function Home() {
 
       {/* 2. About Me Section (Added id="about") */}
       <section id="about" className="w-full gamma-card p-8 md:p-12 animate-slide-up delay-1 scroll-mt-32">
-        <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">About Me ✨</h3>
+        <h3 className="text-3xl font-bold mb-6">
+          <span className="inline-block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            About Me
+          </span>{" "}
+          <span className="inline-block text-blue-500 animate-pulse">✨</span>
+        </h3>
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
         <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
           <p>
