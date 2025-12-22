@@ -65,7 +65,7 @@ export default function Home() {
             >
               {/* font-mono সরিয়ে দিয়েছি, এখন নরমাল ক্লিন ফন্ট */}
               {/* tracking-wide রেখেছি যাতে দেখতে ভালো লাগে */}
-              <h2 className="text-sm md:text-xl font-medium tracking-wide">
+              <h2 className="text-base md:text-xl font-medium tracking-wide">
                 <span
                   className="
                 bg-clip-text 

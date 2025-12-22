@@ -10,12 +10,12 @@ module.exports = {
     extend: {
       // ... colors
       animation: {
-        'shimmer': 'shimmer 9s linear infinite', // ৩ সেকেন্ডে একবার স্লাইড করবে
+        'shimmer': 'shimmer 8s linear infinite', // ৩ সেকেন্ডে একবার স্লাইড করবে
       },
       keyframes: {
         'shimmer': {
-          '0%': { backgroundPosition: '200% 0' },
-          '100%': { backgroundPosition: '-200% 0' },
+          '0%': { backgroundPosition: '250% 0' },
+          '100%': { backgroundPosition: '-250% 0' },
         },
       },
     },
