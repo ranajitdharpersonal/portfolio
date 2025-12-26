@@ -156,12 +156,15 @@ export default function Home() {
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
+            {/* Pulse Effect (Heartbeat) */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-600/40 blur-[60px] rounded-full animate-pulse"></div>
+            
             {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
             <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
 
             <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg relative z-10">🚀</div>
             <div className="relative z-10">
-              <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Problem Solving Mindset</h4>
+              <h4 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-400 mb-1">Problem Solving Mindset</h4>
               <p className="text-sm text-gray-400">From 0 to Deploy in <span className="text-white font-mono">48 Hours</span>.</p>
             </div>
           </div>
