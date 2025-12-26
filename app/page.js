@@ -112,7 +112,7 @@ export default function Home() {
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
         <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
           <p>
-            I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. passionate about building agentic AI systems and cloud powered applications. Starting from zero coding, I now architect real world <span className="text-orange-400">GenAI workflows, multi agent orchestration, and serverless automation</span> using Google Cloud.
+            I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. passionate about building agentic AI systems and cloud powered applications. Starting from zero coding, I now architect real world <span className="text-amber-400">GenAI workflows, multi agent orchestration, and serverless automation</span> using Google Cloud.
           </p>
           <p>
             I thrive on learning by building blending business logic with technical intelligence to turn complex ideas into scalable, user focused AI solutions.
@@ -158,7 +158,7 @@ export default function Home() {
 
             {/* Pulse Effect (Heartbeat) */}
             <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-600/40 blur-[60px] rounded-full animate-pulse"></div>
-            
+
             {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
             <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
 
@@ -208,50 +208,156 @@ export default function Home() {
         </div>
       </section>
 
+
+
       {/* 4. Featured Projects (Added id="projects") */}
       <section id="projects" className="w-full animate-slide-up delay-2 scroll-mt-32">
         <h3 className="text-3xl font-bold mb-10 text-white border-l-4 border-blue-500 pl-4">Featured Projects ⚡️</h3>
 
         <div className="grid grid-cols-1 gap-12">
-          {/* Project 1 */}
-          <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
-            <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
-              <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" />
-            </div>
-            <div className="md:w-1/2 space-y-5">
-              <h4 className="text-3xl font-bold text-white group-hover:text-blue-400 transition">YES Ai 🤖</h4>
-              <p className="text-gray-400">A next-gen AI assistant combining multiple tools with <strong>Gemini 2.0 Flash</strong>.</p>
 
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li className="flex items-center gap-2">🌐 <strong>Real-Time:</strong> Seamlessly connects with live data.</li>
-                <li className="flex items-center gap-2">🔐 <strong>Secure:</strong> Custom login with bcrypt & OTP.</li>
-                <li className="flex items-center gap-2">☁️ <strong>Serverless:</strong> Deployed on Google Cloud Run.</li>
-              </ul>
+          {/* Project 1: YES Ai Studio (With Purple Spinning Border) */}
+          <div className="relative rounded-xl overflow-hidden p-[2px] group h-full">
 
-              <div className="pt-4 flex gap-4">
-                <Link href="https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">View Code</Link>
-                <Link href="#" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">Live Demo</Link>
+            {/* 🔥 SECRET WEAPON: Purple Laser Beam */}
+            {/* আগের Blue (#3b82f6) এর বদলে এখানে Purple (#a855f7) ব্যবহার করা হলো */}
+            <div className="absolute inset-[-100%] animate-border-spin bg-[conic-gradient(transparent_270deg,#3b82f6_360deg)]"></div>
+
+            {/* Inner Card: Solid Background (Must correspond to theme) */}
+            <div className="relative h-full bg-[#0D1117] rounded-xl p-8 flex flex-col md:flex-row gap-8 z-10">
+
+              {/* ------- Image Part ------- */}
+              <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
+                <Image
+                  src="/project2.png"
+                  alt="YES Ai Studio"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-110"
+                />
+                {/* পার্পল আভা ছবির ওপরে */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"></div>
               </div>
+
+              {/* ------- Content Part ------- */}
+              <div className="md:w-1/2 space-y-5">
+                <h4 className="text-3xl font-bold text-white group-hover:text-blue-400 transition">YES Ai Studio Capstone 🌟</h4>
+                <p className="text-gray-400">Autonomous Multi-Agent Pipeline: <strong>Plan → Create → Validate</strong></p>
+
+                {/* ডিটেইলস বক্স একটু আপডেট করা হলো যাতে আইকনগুলো সুন্দর লাগে */}
+                <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-1 border border-white/5 group-hover:border-blue-500/30 transition-colors">
+                  <p className="flex items-center gap-3">
+                    <span className="text-blue-400 text-lg">🧭</span>
+                    <span><strong>Navigator:</strong> Generates learning roadmaps.</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-blue-400 text-lg">📰</span>
+                    <span><strong>Curator:</strong> Creates social media posts & images.</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-blue-400 text-lg">✅</span>
+                    <span><strong>Evaluator:</strong> Quality control & scoring.</span>
+                  </p>
+                </div>
+
+                <div className="pt-4">
+                  <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">
+                    View Capstone Repo
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {/* Project 2 */}
-          <div className="gamma-card p-8 flex flex-col md:flex-row gap-8 group">
-            <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
-              <Image src="/project2.png" alt="YES Ai Studio" fill className="object-cover transition duration-500 group-hover:scale-110" />
-            </div>
-            <div className="md:w-1/2 space-y-5">
-              <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai Studio 🌟</h4>
-              <p className="text-gray-400">Autonomous Multi-Agent Pipeline: <strong>Plan → Create → Validate</strong>.</p>
 
-              <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-2">
-                <p>🧭 <strong>Navigator:</strong> Generates learning roadmaps.</p>
-                <p>📰 <strong>Curator:</strong> Creates social media posts & images.</p>
-                <p>✅ <strong>Evaluator:</strong> Quality control & scoring.</p>
+          {/* Project 2: Sharp Neon Border (Fixed) */}
+          <div className="relative rounded-xl overflow-hidden p-[2px] group h-full">
+
+            {/* 🔥 SECRET WEAPON 2.0: The Laser Beam Gradient */}
+            {/* ১. blur সরিয়ে দিয়েছি (Sharpness এর জন্য) */}
+            {/* ২. Black সরিয়ে transparent ব্যবহার করেছি (Clean Look এর জন্য) */}
+            <div className="absolute inset-[-100%] animate-border-spin bg-[conic-gradient(transparent_270deg,#a855f7_360deg)]"></div>
+
+            {/* ৩. Inner Card: ব্যাকগ্রাউন্ড সলিড হতে হবে! (bg-[#0D1117]) */}
+            {/* backdrop-blur এবং opacity সরিয়ে দেওয়া হয়েছে যাতে আলো ভেতরে না ঢোকে */}
+            <div className="relative h-full bg-[#0D1117] rounded-xl p-8 flex flex-col md:flex-row gap-8 z-10">
+
+              {/* ------- আপনার কন্টেন্ট (যা ছিল তাই) ------- */}
+              <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float">
+                <Image src="/project1.png" alt="YES Ai" fill className="object-cover transition duration-500 group-hover:scale-110" />
               </div>
 
-              <div className="pt-4">
-                <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Capstone Repo</Link>
+              <div className="md:w-1/2 space-y-5">
+                <h4 className="text-3xl font-bold text-white group-hover:text-purple-400 transition">YES Ai 🤖</h4>
+                <p className="text-gray-400">A next-gen AI assistant combining multiple tools with <strong>Gemini 2.0 Flash</strong>.</p>
+
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-center gap-2">🌐 <strong>Real-Time:</strong> Seamlessly connects with live data.</li>
+                  <li className="flex items-center gap-2">🔐 <strong>Secure:</strong> Custom login with bcrypt & OTP.</li>
+                  <li className="flex items-center gap-2">☁️ <strong>Serverless:</strong> Deployed on Google Cloud Run.</li>
+                </ul>
+
+                <div className="pt-4 flex gap-4">
+                  <Link href="https://github.com/ranajitdharpersonal/YES-Ai-2.0-Multi-Tool" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">View Code</Link>
+                  <Link href="#" className="text-white border-b border-purple-500 pb-1 hover:text-purple-400 transition">Live Demo</Link>
+                </div>
+              </div>
+              {/* ------- কন্টেন্ট শেষ ------- */}
+            </div>
+          </div>
+
+          {/* Project 3: YES Ai Studio IoT Edition 🌐 (With amber Spinning Border) */}
+          <div className="relative rounded-xl overflow-hidden p-[2px] group h-full">
+
+            {/* 🔥 SECRET WEAPON: Emerald Green Laser Beam */}
+            {/* আগের Blue (#3b82f6) এর বদলে এখানে Emerald Green (#10b981) ব্যবহার করা হলো */}
+            <div className="absolute inset-[-100%] animate-border-spin bg-[conic-gradient(transparent_270deg,#f59e0b_360deg)]"></div>
+
+            {/* Inner Card: Solid Background (Must correspond to theme) */}
+            <div className="relative h-full bg-[#0D1117] rounded-xl p-8 flex flex-col md:flex-row gap-8 z-10">
+
+              {/* ------- Image Part ------- */}
+              <div className="md:w-1/2 min-h-[280px] bg-black/40 rounded-xl border border-white/10 flex items-center justify-center relative overflow-hidden animate-float delay-1">
+                <Image
+                  src="/project3.png"
+                  alt="YES Ai Studio IoT Edition 🌐"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-110"
+                />
+                {/* পার্পল আভা ছবির ওপরে */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              </div>
+
+              {/* ------- Content Part ------- */}
+              <div className="md:w-1/2 space-y-5">
+                <h4 className="text-3xl font-bold text-white group-hover:text-amber-500 transition">YES Ai Studio IoT Edition 🌐</h4>
+                <p className="text-gray-400">AI Driven IoT Intelligence: <strong>Sense → Analyze → Act</strong></p>
+
+                {/* ডিটেইলস বক্স একটু আপডেট করা হলো যাতে আইকনগুলো সুন্দর লাগে */}
+                <div className="bg-white/5 p-4 rounded-lg text-sm text-gray-300 space-y-1 border border-white/5 group-hover:border-amber-500/30 transition-colors">
+                  <p className="flex items-center gap-3">
+                    <span className="text-amber-400 text-lg">📡</span>
+                    <span><strong>Sensor Agent:</strong> Ingests & simulates IoT sensor data streams</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-amber-400 text-lg">🧠</span>
+                    <span><strong>Analyzer Agent:</strong> Detects patterns, anomalies & thresholds</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-amber-400 text-lg">⚡</span>
+                    <span><strong>Action Agent:</strong> Generates alerts / actions based on AI decisions</span>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-amber-400 text-lg">✅</span>
+                    <span><strong>Evaluator Agent:</strong> Validates data reliability & response accuracy</span>
+                  </p>
+                </div>
+
+                <div className="pt-4">
+                  <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-amber-500 pb-1 hover:text-amber-400 transition">
+                    View Capstone Repo
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
