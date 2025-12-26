@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         {/* Buttons: Mobile (Vertical) / Desktop (Horizontal) */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 pt-8 w-full px-6 md:px-0">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 pt-0 w-full px-6 md:px-0">
 
           <Link href="https://linkedin.com/in/ranajit-dhar-dev" className="w-full md:w-auto px-8 py-3 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold transition hover:scale-105 shadow-lg shadow-blue-500/25 text-center">
             Connect LinkedIn
@@ -112,10 +112,10 @@ export default function Home() {
         <h4 className="text-xl font-semibold text-white mb-4">From Commerce to Code: My Journey into AI Innovation</h4>
         <div className="space-y-4 text-gray-300 leading-relaxed text-lg">
           <p>
-            I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. Breaking the stereotype that you need a CS degree to code. I build autonomous agents, secure cloud workflows, and real-world generative AI applications.
+            I'm a B.Com graduate turned <strong>AI Engineer in progress</strong>. passionate about building agentic AI systems and cloud powered applications. Starting from zero coding, I now architect real world <span className="text-orange-400">GenAI workflows, multi agent orchestration, and serverless automation</span> using Google Cloud.
           </p>
           <p>
-            From starting with zero coding background to creating advanced agentic systems, my journey proves that <span className="text-blue-300">curiosity, grit, and creativity</span> can build anything.
+            I thrive on learning by building blending business logic with technical intelligence to turn complex ideas into scalable, user focused AI solutions.
           </p>
         </div>
         <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-purple-900/20 to-blue-900/20 border border-purple-500/20">
@@ -131,10 +131,16 @@ export default function Home() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-5 h-auto md:h-[450px]">
-          {/* Card 1: Main USP */}
+
+          {/* ----------------- Card 1: Main USP (Big Box) ----------------- */}
           <div className="col-span-1 md:col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-8 flex flex-col justify-center group transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_50px_rgba(59,130,246,0.2)]">
+
+            {/* Background Blob */}
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/40 transition-all duration-700"></div>
-            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 transition-all duration-1000 group-hover:left-[150%]"></div>
+
+            {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
+            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
+
             <div className="relative z-10">
               <div className="text-6xl mb-6 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">🧠</div>
               <h4 className="text-3xl font-bold text-white mb-3 tracking-tight">Business + AI Architect</h4>
@@ -143,27 +149,59 @@ export default function Home() {
               </p>
             </div>
           </div>
-          {/* Card 2: Speed */}
+
+          {/* ----------------- Card 2: Problem Solving (Wide Box) ----------------- */}
           <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex items-center gap-5 group transition-all duration-300 hover:-translate-y-1 hover:bg-white/5">
+
+            {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg">🚀</div>
-            <div>
-              <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Rapid Prototyping</h4>
+
+            {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
+            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
+
+            <div className="p-4 bg-white/5 rounded-xl border border-white/10 text-3xl group-hover:scale-125 group-hover:rotate-45 transition-all duration-500 shadow-lg relative z-10">🚀</div>
+            <div className="relative z-10">
+              <h4 className="text-xl font-bold text-white group-hover:text-purple-300 transition">Problem Solving Mindset</h4>
               <p className="text-sm text-gray-400">From 0 to Deploy in <span className="text-white font-mono">48 Hours</span>.</p>
             </div>
           </div>
-          {/* Card 3: Agentic */}
-          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-purple-500/50 transition-all duration-300">
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-purple-600/20 blur-[50px] rounded-full group-hover:bg-purple-600/40 transition"></div>
-            <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">🤖</div>
-            <h4 className="text-lg font-bold text-purple-200">Agentic<br />Systems</h4>
+
+          {/* ----------------- Card 3: Agentic Systems (Small Box) ----------------- */}
+          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-purple-500/50">
+
+            {/* Pulse Effect (Heartbeat) */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-600/40 blur-[60px] rounded-full animate-pulse"></div>
+
+            {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
+            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
+
+            <div className="text-4xl mb-2 relative z-10">🤖</div>
+            <div className="relative z-10">
+              <h4 className="text-lg font-bold text-purple-400 mb-1">Agentic Systems</h4>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Designing multi agent workflows for reasoning, automation, and orchestration.
+              </p>
+            </div>
           </div>
-          {/* Card 4: Cloud */}
-          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between group hover:border-green-500/50 transition-all duration-300">
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-600/20 blur-[50px] rounded-full group-hover:bg-green-600/40 transition"></div>
-            <div className="text-4xl mb-2 transform transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-110">☁️</div>
-            <h4 className="text-lg font-bold text-green-200">Cloud<br />Native</h4>
+
+          {/* ----------------- Card 4: Cloud Native (Small Box) ----------------- */}
+          <div className="col-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-green-500/50">
+
+            {/* Pulse Effect (Heartbeat) */}
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-green-600/40 blur-[60px] rounded-full animate-pulse"></div>
+
+            {/* 🔥 SECRET WEAPON: Auto Shine 🔥 */}
+            <div className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-card-shine z-0"></div>
+
+            <div className="text-4xl mb-2 relative z-10">☁️</div>
+            <div className="relative z-10">
+              <h4 className="text-lg font-bold text-green-200 mb-1">Cloud Native</h4>
+              <p className="text-xs text-gray-400 leading-relaxed">
+                Deploying scalable GenAI systems using Google Cloud & serverless architecture.
+              </p>
+            </div>
           </div>
+
         </div>
       </section>
 
