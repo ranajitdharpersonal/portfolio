@@ -354,7 +354,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4">
-                  <Link href="https://github.com/ranajitdharpersonal/-YES-Ai-Studio-Agentic-Multimodal-Creator-Capstone-Edition-" className="text-white border-b border-amber-500 pb-1 hover:text-amber-400 transition">
+                  <Link href="https://github.com/ranajitdharpersonal/YES-Ai-Studio-IoT-Edition-" className="text-white border-b border-amber-500 pb-1 hover:text-amber-400 transition">
                     View Capstone Repo
                   </Link>
                 </div>
@@ -370,45 +370,108 @@ export default function Home() {
           <h3 className="text-xl font-bold mb-6 text-yellow-400 flex items-center gap-2">🏆 Hackathon Recognition 2025</h3>
           <ul className="space-y-4 text-gray-300 text-sm">
             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-              <strong className="text-white block text-base">Google Cloud Run Hackathon</strong>
-              Scalable cloud deployment & containerized AI.
+              <strong className="text-white block text-base">Google Cloud Run Hackathon 2025</strong>
+              Demonstrated scalable cloud deployment and containerized AI solutions.
             </li>
             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-              <strong className="text-white block text-base">Chrome Built-in AI</strong>
-              Showcased browser integrated AI capabilities.
+              <strong className="text-white block text-base">Google Chrome Built-in AI Challenge 2025</strong>
+              Showcased browser integrated AI capabilities for seamless user experiences.
             </li>
             <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
-              <strong className="text-white block text-base">Kaggle Community Hackathon</strong>
-              Structured agent pipelines & evaluation frameworks.
+              <strong className="text-white block text-base">Google AI Accelerate: Unlocking New Frontiers Hackathon</strong>
+              Highlighted advanced generative AI features and real world applications.
             </li>
+            <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
+              <strong className="text-white block text-base">Kaggle · Community Hackathon - Agents Intensive</strong>
+              Showcased an end-to-end agentic AI creator to automate content, analysis & workflow tasks.
+            </li>
+            <li className="bg-white/5 p-3 rounded-lg border-l-2 border-yellow-500">
+              <strong className="text-white block text-base">Tuya Al Innovators Hackathon 2025</strong>
+              Multi Agent AI System that autonomously controls IoT devices (Smart Lighting) based on quality assessment.
+            </li>
+            <div className="pt-4">
+              <Link href="https://devpost.com/ranajitdharpersonal?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" className="inline-flex items-center gap-2 px-5 py-2 bg-yellow-600/20 text-yellow-300 rounded-full text-sm hover:bg-yellow-600/30 transition border border-yellow-500/30">
+                Devpost Portfolio &rarr;
+              </Link>
+            </div>
           </ul>
         </section>
 
         <section className="gamma-card p-8">
-          <h3 className="text-xl font-bold mb-6 text-green-400 flex items-center gap-2">🧠 Core Technical Expertise</h3>
+          <h3 className="text-xl font-bold mb-6 text-amber-400 flex items-center gap-2">⚡ Core Technical Expertise</h3>
+
           <div className="space-y-6">
+
+            {/* AI & ML Skills */}
             <div>
-              <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">AI & ML Skills</h4>
+              <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">🧠 AI & ML Skills</h4>
               <div className="flex flex-wrap gap-2">
-                {["Generative AI", "Prompt Engineering", "Orchestration", "LLMs", "Vertex AI", "RAG"].map(s => (
-                  <span key={s} className="px-3 py-1 bg-green-500/10 text-green-300 border border-green-500/20 text-xs rounded-full cursor-default">
+                {[
+                  "Generative AI",
+                  "Large Language Models (LLMs)",
+                  "Natural Language Processing (NLP)",
+                  "Machine Learning",
+                  "Multimodal AI",
+                  "Artificial Intelligence (AI)"
+                ].map(s => (
+                  <span key={s} className="px-3 py-1 bg-blue-500/10 text-blue-300 border border-green-500/20 text-xs rounded-full cursor-default">
                     {s}
                   </span>
                 ))}
               </div>
             </div>
+
+            {/* Development & Backend */}
             <div>
-              <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">Development & Cloud</h4>
+              <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">🤖 Agentic & Automation</h4>
               <div className="flex flex-wrap gap-2">
-                {["Python", "Streamlit", "Next.js", "Cloud Run", "Serverless", "API Integration"].map(s => (
-                  <span key={s} className="px-3 py-1 bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs rounded-full cursor-default">
+                {[
+                  "Agentic AI Development",
+                  "Multi-Agent Systems",
+                  "Autonomous Agents",
+                  "AI Agents",
+                  "AI Workflow Orchestration",
+                  "Tool Calling / Function Calling",
+                  "Reasoning & Planning",
+                  "Workflow Automation"
+                ].map(s => (
+                  <span key={s} className="px-3 py-1 bg-green-500/10 text-green-300 border border-blue-500/20 text-xs rounded-full cursor-default">
                     {s}
                   </span>
                 ))}
               </div>
             </div>
+
+            {/* Security & Authentication */}
+            <div>
+              <h4 className="text-white font-semibold mb-3 border-b border-gray-700 pb-2">🛠 Development, Cloud & Engineering</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Python Programming",
+                  "AI Application Development",
+                  "Backend Development",
+                  "REST APIs",
+                  "Data Parsing & JSON Structuring",
+                  "Web App Deployment",
+                  "Scalable Web Apps",
+                  "Serverless Architecture",
+                  "Google Cloud Platform (GCP)",
+                  "Vertex AI",
+                  "Google Gemini API / Gemini APIs",
+                  "Streamlit",
+                  "Authentication Systems",
+                  "bcrypt Password Hashing"
+                ].map(s => (
+                  <span key={s} className="px-3 py-1 bg-pink-500/10 text-pink-300 border border-red-500/20 text-xs rounded-full cursor-default">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+
           </div>
         </section>
+
       </div>
 
       {/* 6. Certifications & Education */}
@@ -418,16 +481,16 @@ export default function Home() {
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-2xl">🏅</div>
             <div>
-              <h4 className="text-white font-bold">55+ Skill Badges</h4>
+              <h4 className="text-white font-bold">62+ Skill Badges</h4>
               <p className="text-sm text-gray-400">Earned on Google Cloud Skills Boost</p>
             </div>
           </div>
           <ul className="space-y-3 text-sm text-gray-300 list-disc ml-5 marker:text-pink-500">
-            <li>Inspect Rich Documents with Gemini</li>
-            <li>Multimodality and Multimodal RAG</li>
-            <li>Introduction to Generative AI</li>
-            <li>Develop GenAI Apps with Streamlit</li>
-            <li>Prompt Design in Vertex AI</li>
+            <li>Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge</li>
+            <li>Build Real World AI Applications with Gemini and Imagen Skill Badge</li>
+            <li>Develop GenAI Apps with Gemini and Streamlit Skill Badge</li>
+            <li>Explore Generative AI with the Vertex AI Gemini API Skill Badge</li>
+            <li>Prompt Design in Vertex AI Skill Badge</li>
           </ul>
           <div className="mt-8">
             <Link href="https://www.credly.com/users/ranajit-dhar" className="inline-flex items-center gap-2 px-5 py-2 bg-pink-600/20 text-pink-300 rounded-full text-sm hover:bg-pink-600/30 transition border border-pink-500/30">
@@ -449,7 +512,7 @@ export default function Home() {
 
           <div className="border-t border-gray-700 pt-6">
             <h4 className="text-white font-bold mb-1">Google Cloud Skill Boost</h4>
-            <p className="text-sm text-gray-400">Completed <strong>46+ courses</strong> and <strong>121+ hands-on labs</strong>.</p>
+            <p className="text-sm text-gray-400">Completed <strong>46+ courses</strong> and <strong>169+ hands-on labs</strong>.</p>
           </div>
         </section>
       </div>
